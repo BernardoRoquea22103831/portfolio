@@ -39,7 +39,6 @@ class Professor(models.Model):
 class Projeto(models.Model):
     titulo = models.CharField(max_length=60)
     descricao = models.CharField(max_length=500, blank=True)
-    imagem = models.ImageField(upload_to='media/', null=True, blank=True)
     anoDeRealizacao = models.IntegerField(default=0)
     participantes = models.ForeignKey(Pessoa, on_delete=models.CASCADE, blank=True)
     gitHub = models.CharField(max_length=2000, blank=True)
@@ -59,7 +58,6 @@ class Cadeira(models.Model):
     rank = models.IntegerField(default=0)
     professorPraticas = models.ManyToManyField(Professor, related_name='cadeiras')
     professorTeoricas = models.ManyToManyField(Professor)
-    imagem = models.ImageField(upload_to='media/', null=True, blank=True)
     projeto = models.ForeignKey(Projeto, on_delete=models.CASCADE, blank=True, default=None)
     linguagem = models.ManyToManyField(Linguagem, related_name='linguagens')
 

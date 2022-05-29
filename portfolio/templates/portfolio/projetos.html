@@ -1,0 +1,21 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/projetos.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock style %}
+
+{% block main %}
+
+<div class="container">
+    {% for projeto in projetos %}
+    <div class="cont">
+        <h2>{{projeto.titulo}}</h2>
+        <p>{{projeto.descricao}}</p>
+        <p>{{projeto.anoDeRealizacao}}</p>
+        <p>{{projeto.participantes}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

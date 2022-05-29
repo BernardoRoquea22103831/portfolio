@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+header {
+    padding: 15px 10%;
+    background: white;
+    color: grey;
+
+    /* alinhando logo e menu */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h3 {
+    cursor: pointer;
+    margin-right: auto;
+    float: left;
+}
+
+button {
+    padding: 9px 45px;
+    background-color: #af8f1b;
+    border: none;
+    color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 40px;
+}
+
+button:hover {
+    background-color: rgba(15, 217, 163, 0.8);
+}
+
+main {
+    height: 85vh;
+    background-color: white;
+    padding: 4em 4em;
+}
+
+footer {
+    height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2vw;
+    align-items: center;
+    background-color: white;
+}
+
+.contai{
+    margin: 0 auto;
+}
+
+nav {
+    background: #FFF;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+nav a {
+    color: #444;
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem 1.75rem;
+}
+
+nav li:hover {
+    color: #444;
+}
+
+nav a:hover {
+    color:black;
+
+}
+
+nav a:hover::before{
+    width:100%;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    background-color: #444;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+.menu-sub {
+    position: absolute;
+    background: white;
+    display: none;
+}
+
+nav li:hover .menu-sub {
+    display: block;
+}
+
+.menu-sub li {
+    display: block;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}

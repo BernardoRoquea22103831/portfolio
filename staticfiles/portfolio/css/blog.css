@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 25px 100px;
+}
+
+.container div {
+    float: left;
+    width: 250px;
+    height: 35vh;
+    padding: 25px;
+    margin: 10px;
+    background-color: #FFF8DB;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px grey;
+}
+
+.after-box {
+    clear: left;
+    background-color: skyblue;
+}
+
+main {
+    background-color: white;
+    height: 80vh;
+    background-image: url("../images/blog.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.damn {
+    text-align: center;
+}
+
+.damn button {
+    padding: 9px 25px;
+    background-color: rgb(21, 231, 197);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+}

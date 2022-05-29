@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 25px 100px;
+ }
+.container div{
+  float: left;
+  width: 250px;
+  height: 35vh;
+  padding: 25px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px grey;
+}
+.after-box {
+  clear: left;
+  background-color: skyblue;
+}
+.checked {
+  color: lightblue;
+}
+
+main {
+    background-color: lightcyan;
+    height: 85vh;
+}

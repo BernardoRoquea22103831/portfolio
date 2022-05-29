@@ -1,0 +1,18 @@
+.container {
+    display: grid;
+    gap: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    box-shadow: 5px 5px 10px lightblue;
+    grid-column-gap: 10px;
+    margin-inside: auto;
+    width: min(95%, 70rem);
+    border-radius: 20px;
+}
+
+main {
+    background: transparent;
+}
+
+.cont {
+    background-color: lightcyan;
+}

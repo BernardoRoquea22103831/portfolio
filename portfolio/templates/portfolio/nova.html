@@ -1,0 +1,17 @@
+{% extends 'portfolio/layout.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/nova.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock style %}
+{% block main %}
+<form method="POST" action="">
+    {% csrf_token %}
+    <div class="container">
+        {{form.as_p}}
+    </div>
+    <div class="but">
+        <button type="submit">Gravar</button>
+    </div>
+</form>
+{% endblock %}

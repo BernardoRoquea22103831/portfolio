@@ -1,0 +1,27 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/blog.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock style %}
+{% block main %}
+<div class="container">
+    {% for blog in blogs %}
+    <div>
+        <p>{{blog.titulo}}</p>
+        <p>{{blog.descricao}}</p>
+        <p>{{blog.nomeAutor}}</p>
+        <p>{{blog.data.day}}/{{blog.data.month}}/{{blog.data.year}}</p>
+    </div>
+    {% endfor %}
+</div>
+<div class="damn">
+
+    <a href="{% url 'portfolio:nova'%}" class="btn btn-sucess">
+        <button>Post Blog</button>
+    </a>
+
+</div>
+{% endblock %}

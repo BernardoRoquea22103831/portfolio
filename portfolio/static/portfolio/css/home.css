@@ -1,0 +1,28 @@
+article.primeiro {
+    /* definindo altura e cor */
+    background: orange;
+    padding: 0 4vw;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 30vh;
+}
+
+
+article.segundo {
+    /* como tem menu e rodapé visíveis (10vh cada), define-se como altura 80vh. */
+    height: 80vh;
+    background-image: url("../images/turk.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    align-items: start;
+}
+
+main {
+    background-image: url("../images/viagem.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

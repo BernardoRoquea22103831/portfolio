@@ -1,0 +1,27 @@
+{% extends "portfolio/layout.html" %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/login.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock style %}
+
+{% block main %}
+
+
+{% if message %}
+<p> {{ message }} </p>
+{% endif %}
+<div class="super">
+    <form action="" method="post">
+        {% csrf_token %}
+        <b></b><h2>Login</h2></b>
+        <br>
+        <input type="text" name="username" placeholder="username" class="cont">
+        <br>
+        <input type="password" name="password" placeholder="password" class="cont">
+        <br>
+        <input type="submit" value="Login" class="but">
+    </form>
+</div>
+
+{% endblock main %}

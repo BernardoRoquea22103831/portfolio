@@ -1,0 +1,22 @@
+{%  extends 'portfolio/layout.html' %}
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/home.css' %}">
+{% endblock style %}
+
+{% block main %}
+<div class="testes"></div>
+{% endblock %}
+
+{% block article %}
+<article class="primeiro">
+    <p>
+        Escolhi o curso de engenharia informatica, pois é um curso que me interessa, tem boas oportunidades de emprego,
+        é um curso criativo e é desafinate.
+        Todos os dias podemos lentamente tornar um mundo melhor e acredito que em qualquer engenharia o conseguimos
+        fazer, desenvolvendo softwares que faça com que o nosso dia a dia fique mais facil e sustentável
+    </p>
+</article>
+<article class="segundo"></article>
+{% endblock article %}

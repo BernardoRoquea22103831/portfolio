@@ -8,62 +8,67 @@
 {% endblock style %}
 
 {% block main %}
-    <div class="container">
-        {% for cadeira in cadeiras %}
-        <div>
-            <h2>{{cadeira}}</h2>
-            <p>Ano: {{cadeira.ano}}</p>
-            <p>Semestre: {{cadeira.semestre}}</p>
-            <p>ETCS: {{cadeira.etcs}}</p>
-            <p>Ano letivo: {{cadeira.anoLetivo}}</p>
-            <p>Topicos: {{cadeira.topicos}}</p>
-            <p>Projetos: {{cadeira.projetos}}</p>
-            {% for prof in cadeira.professorTeoricas.all %}
-            <p>ProfTeori: {{prof}}</p>
-            {% endfor %}
-            {% if cadeira.rank == 0 %}
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            {% endif %}
-            {% if cadeira.rank == 1 %}
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            {% endif %}
-            {% if cadeira.rank == 2 %}
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            {% endif %}
-            {% if cadeira.rank == 3 %}
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            {% endif %}
-            {% if cadeira.rank == 4 %}
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            {% endif %}
-            {% if cadeira.rank == 5 %}
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            {% endif %}
-        </div>
+<div class="container">
+    {% for cadeira in cadeiras %}
+    <div>
+        <h2>{{cadeira}}</h2>
+        <p>Ano: {{cadeira.ano}}</p>
+        <p>Semestre: {{cadeira.semestre}}</p>
+        <p>ETCS: {{cadeira.etcs}}</p>
+        <p>Ano letivo: {{cadeira.anoLetivo}}</p>
+        <p>Topicos: {{cadeira.topicos}}</p>
+        <p>Projetos: {{cadeira.projetos}}</p>
+        {% for prof in cadeira.professorTeoricas.all %}
+        <p>ProfTeori: {{prof}}</p>
         {% endfor %}
+        {% if cadeira.rank == 0 %}
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        {% endif %}
+        {% if cadeira.rank == 1 %}
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        {% endif %}
+        {% if cadeira.rank == 2 %}
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        {% endif %}
+        {% if cadeira.rank == 3 %}
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        {% endif %}
+        {% if cadeira.rank == 4 %}
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        {% endif %}
+        {% if cadeira.rank == 5 %}
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        {% endif %}
     </div>
+    {% endfor %}
+</div>
+<div class="bo">
+    <a href="{% url 'portfolio:novaLicenciatura'%}" class="btn btn-sucess">
+        <button>Add Cadeira</button>
+    </a>
+</div>
 {% endblock %}

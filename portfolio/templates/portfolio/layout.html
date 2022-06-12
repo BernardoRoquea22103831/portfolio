@@ -42,12 +42,38 @@
         </div>
     </nav>
     <a class="cta" href="{% url 'portfolio:logout' %}">
-        <button>Logout</button>
+        <button class="but">Logout</button>
     </a>
     {% else %}
-    <a class="cta" href="{% url 'portfolio:login' %}">
-        <button>Login</button>
+
+    <nav>
+        <div class="contai">
+            <ul class="menu-main">
+                <li><a href="{% url 'portfolio:contacto' %}">Contacto</a></li>
+                <li><a href="{% url 'portfolio:blog' %}">Blog</a></li>
+                <li><a href="{% url 'portfolio:projetos' %}">Projetos</a></li>
+                <li><a href="{% url 'portfolio:web' %}">Web</a></li>
+
+                <li><a href="{% url 'portfolio:about' %}">About me</a>
+                    <div class="menu-sub">
+                        <ul>
+                            <li><a href="{% url 'portfolio:aptidoes' %}">Apetidões</a></li>
+                            <li><a href="{% url 'portfolio:certificados' %}">Certificados</a></li>
+                            <li><a href="{% url 'portfolio:educacao' %}">Educação</a></li>
+                            <li><a href="{% url 'portfolio:habilitacoes' %}">Habilitações</a></li>
+                            <li><a href="{% url 'portfolio:hobbies' %}">Hobbies</a></li>
+                            <li><a href="{% url 'portfolio:licenciatura' %}">Licenciatura</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="{% url 'portfolio:home' %}">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    \<a class="cta" href="{% url 'portfolio:login' %}">
+        <button class="but">Login</button>
     </a>
+
     {% endif %}
 </header>
 

@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
-from .forms import BlogForm
+from .forms import *
 from .models import *
 
 
@@ -38,6 +38,17 @@ def nova_page_view(request):
         'form': form
     }
     return render(request, 'portfolio/nova.html', context)
+
+
+def novaLicenciatura_page_view(request):
+    form = CadeiraForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('menu2:cadeira'))
+    context = {
+        'form': form
+    }
+    return render(request, 'menu2/novaLicenciatura.html', context)
 
 
 def projetos_page_view(request):
@@ -106,4 +117,16 @@ def licenciatura_page_view(request):
         'cadeiras': Cadeira.objects.all(),
 
     }
-    return render(request, 'menu2/licenciatura.html',context)
+    return render(request, 'menu2/licenciatura.html', context)
+
+
+def editarBlog_page_view(request, blog_id):
+    blog = Blog.objects.get(pk=blog_id)
+    form = BlogForm(request.POST or None, instance=blog)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:blog'))
+    context = {
+        'form': form, 'blog_id': blog_id
+    }
+    return render(request, 'portfolio/editarBlog.html', context)

@@ -1,6 +1,44 @@
 {% extends 'portfolio/layout.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/quizz .css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock style %}
 
 {% block main %}
-	<h3>Titulo</h3>
-    <p>texto texto texto texto texto texto texto </p>
+
+<h2>Quizz de Web</h2>
+<br>
+<form action="">
+    <fieldset>
+        <legend>Info</legend>
+        <br>
+        <label><p>Nome:<input type="text" name="nome"></p></label>
+        <br>
+        <label><p>Apelido:<input type="text" name="apelido"></p></label>
+        <br>
+        <label><p>E-mail:<input type="email" name="email"></p></label>
+
+    </fieldset>
+    </fieldset>
+    <br>
+    <fieldset name="">
+        <legend>Perguntas</legend>
+        <br>
+        <h4>Escolhe a opção que seja para criar um paragrafo em html</h4>
+        <label>h1<input type="checkbox" name="" value=""></label>
+        <label>h3<input type="checkbox" name="" value=""></label>
+        <label>li<input type="checkbox" name="" value=""></label>
+        <label>p<input type="checkbox" name="" value=""></label>
+        <br>
+        <br>
+        <h4>Escolhe a opção que seja para criar um h1 em html</h4>
+        <label>h1<input type="radio" name="" value=""></label>
+        <label>h3<input type="radio" name="" value=""></label>
+        <label>li<input type="radio" name="" value=""></label>
+        <label>p<input type="radio" name="" value=""></label>
+    </fieldset>
+    <input type="submit">
+</form>
 {% endblock %}

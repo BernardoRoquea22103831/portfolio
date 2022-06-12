@@ -3,13 +3,33 @@
 {% block style %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'portfolio/css/home.css' %}">
+<script src="{% static 'portfolio/js/API.js' %}" defer></script>
+<script src="{% static 'portfolio/js/temp.js' %}" defer></script>
+<script src="{% static 'portfolio/js/teste.js' %}" defer></script>
+
 {% endblock style %}
 
 {% block main %}
 <div class="testes"></div>
+
+
+<div class="clock">
+    <span id="horas">00</span>
+    <span>:</span>
+    <span id="minutos">00</span>
+    <span>:</span>
+    <span id="segundos">00</span>
+    <span id="seccao">AM</span>
+
+</div>
+
+<p id="id"></p>
+
 {% endblock %}
 
 {% block article %}
+
+
 <article class="primeiro">
     <p>
         Escolhi o curso de engenharia informatica, pois é um curso que me interessa, tem boas oportunidades de emprego,
@@ -18,5 +38,72 @@
         fazer, desenvolvendo softwares que faça com que o nosso dia a dia fique mais facil e sustentável
     </p>
 </article>
-<article class="segundo"></article>
+<article class="segundo">
+    <h1>Meteorologia</h1>
+    <br>
+    <h2>Hoje</h2>
+    <div class="Temperatura">
+
+        <div class="contss">
+            <h2>Lisboa</h2>
+            <br>
+            <h4 id="tempMin1"></h4>
+            <br>
+            <h4 id="tempMax1"></h4>
+        </div>
+        <div class="contss">
+            <h2>Porto</h2>
+            <br>
+            <h4 id="tempMin2"></h4>
+            <br>
+            <h4 id="tempMax2"></h4>
+        </div>
+        <div class="contss">
+            <h2>Faro</h2>
+            <br>
+            <h4 id="tempMin3"></h4>
+            <br>
+            <h4 id="tempMax3"></h4>
+        </div>
+        <div class="contss">
+            <h2>Castelo Branco</h2>
+            <br>
+            <h4 id="tempMin4"></h4>
+            <br>
+            <h4 id="tempMax4"></h4>
+        </div>
+    </div>
+    <h2>Amanhã</h2>
+    <div class="Temperatura">
+      <div class="contss">
+            <h2>Lisboa</h2>
+            <br>
+            <h4 id="tMin"></h4>
+            <br>
+            <h4 id="tMax"></h4>
+        </div>
+        <div class="contss">
+            <h2>Porto</h2>
+            <br>
+            <h4 id="teMin"></h4>
+            <br>
+            <h4 id="teMax"></h4>
+        </div>
+        <div class="contss">
+            <h2>Faro</h2>
+            <br>
+            <h4 id="temMin"></h4>
+            <br>
+            <h4 id="temMax"></h4>
+        </div>
+        <div class="contss">
+            <h2>Castelo Branco</h2>
+            <br>
+            <h4 id="tempMin"></h4>
+            <br>
+            <h4 id="tempMax"></h4>
+        </div>
+    </div>
+</article>
+
 {% endblock article %}

@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 25px 100px;
+    text-align: center;
+}
+
+.container div {
+    float: left;
+    width: 250px;
+    height: 35vh;
+    padding: 25px;
+    margin: 10px;
+    background-color: lightblue;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px grey;
+}
+
+
+.after-box {
+    clear: left;
+    background-color: skyblue;
+}
+
+main {
+    background-image: url("../images/blog.e150855e5aa9.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 85vh;
+}
+.but button {
+    padding: 9px 25px;
+    background-color: rgb(21, 231, 197);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+}
+.but{
+    text-align: center;
+}

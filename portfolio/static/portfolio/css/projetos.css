@@ -1,4 +1,4 @@
-.container {
+.container_projetos {
     display: grid;
     gap: 5%;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

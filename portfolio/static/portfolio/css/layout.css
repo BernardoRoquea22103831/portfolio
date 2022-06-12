@@ -25,7 +25,7 @@ header h3 {
     float: left;
 }
 
-button {
+.but {
     padding: 9px 45px;
     background-color: #af8f1b;
     border: none;
@@ -36,7 +36,7 @@ button {
     margin-left: 40px;
 }
 
-button:hover {
+.but:hover {
     background-color: rgba(15, 217, 163, 0.8);
 }
 
@@ -93,7 +93,7 @@ nav a:hover {
 }
 
 nav a:hover::before{
-    width:100%;
+    width:75%;
 }
 
 nav a::before {

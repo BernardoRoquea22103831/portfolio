@@ -1,0 +1,14 @@
+{% extends 'portfolio/layout.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/editar.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock style %}
+{% block main %}
+<form method="POST" action="{% url 'portfolio:editarBlog' blog_id %}">
+    {% csrf_token %}
+
+    {{ form.as_p}}
+    <input type="submit" value="Gravar">
+</form>
+{% endblock %}

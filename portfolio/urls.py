@@ -22,4 +22,6 @@ urlpatterns = [
     path('habilitacoes', views.habilitacoes_page_view, name='habilitacoes'),
     path('hobbies', views.hobbies_page_view, name='hobbies'),
     path('licenciatura', views.licenciatura_page_view, name='licenciatura'),
+    path('novaLicenciatura', views.novaLicenciatura_page_view, name='novaLicenciatura'),
+    path('editarBlog/<int:blog_id>', views.editarBlog_page_view, name="editarBlog"),
 ]

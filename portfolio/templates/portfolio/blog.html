@@ -7,15 +7,20 @@
 
 {% endblock style %}
 {% block main %}
-<div class="container">
+<div class="blog_container">
     {% for blog in blogs %}
-    <div>
-        <p>{{blog.titulo}}</p>
+    <div class="blogs">
+        <h2>{{blog.titulo}}</h2>
+        <br>
         <p>{{blog.descricao}}</p>
+        <br>
         <p>{{blog.nomeAutor}}</p>
         <p>{{blog.data.day}}/{{blog.data.month}}/{{blog.data.year}}</p>
+        <button class="blog_botao"><a href="{% url 'portfolio:editarBlog' blog.id %}" class="b">Editar</a></button>
     </div>
+
     {% endfor %}
+
 </div>
 <div class="damn">
 

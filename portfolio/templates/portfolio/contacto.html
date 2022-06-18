@@ -1,7 +1,18 @@
 {% extends 'portfolio/layout.html' %}
 
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/contacto.css' %}">
+{% endblock style %}
+
 {% block main %}
 
-<h1>Eu sou o Bernardo Roque</h1>
+<h1>Bernardo Laia Roque</h1>
+<h2>Bring ideias to Life with Code</h2>
 <p>Podem contactarem no seguinte E-mail: xxx@gmail.com</p>
+
+{% load static %}
+<a class="icone_insta" href="https://www.instagram.com" target="_blank"><img  class="icone_insta" src="{% static 'portfolio/images/instagram.gif' %}"></a>
+<a class="icone_link" href="https://pt.linkedin.com" target="_blank"><img class="icone_link" src="{% static 'portfolio/images/link.gif' %}"></a>
 {% endblock %}

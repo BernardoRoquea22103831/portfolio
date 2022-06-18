@@ -10,8 +10,14 @@
     <div class="container">
         {{form.as_p}}
     </div>
-    <div class="but">
-        <button type="submit">Gravar</button>
+    <div class="nova_licenciatura_botao">
+        <div class="novaLicenciatura_but">
+            <button class="nova_licenciatura_botao" type="submit">Gravar</button>
+        </div>
+
+        <div class="novaLicenciatura_but">
+            <button><a href="{% url 'portfolio:licenciatura'  %}">Cancelar</a></button>
+        </div>
     </div>
 </form>
 {% endblock %}

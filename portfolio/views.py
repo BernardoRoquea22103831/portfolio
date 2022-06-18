@@ -40,6 +40,17 @@ def nova_page_view(request):
     return render(request, 'portfolio/nova.html', context)
 
 
+def novaProjeto_page_view(request):
+    form = ProjetoForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:projeto'))
+    context = {
+        'form': form
+    }
+    return render(request, 'portfolio/novoProjeto.html', context)
+
+
 def novaLicenciatura_page_view(request):
     form = CadeiraForm(request.POST or None)
     if form.is_valid():

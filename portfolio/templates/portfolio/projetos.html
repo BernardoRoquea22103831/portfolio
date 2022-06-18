@@ -4,6 +4,7 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'portfolio/css/projetos.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="{% static 'portfolio/Js/popup.js' %}" defer></script>
 {% endblock style %}
 
 {% block main %}
@@ -15,7 +16,19 @@
         <p>{{projeto.descricao}}</p>
         <p>{{projeto.anoDeRealizacao}}</p>
         <p>{{projeto.participantes}}</p>
+        <p>{{projeto.gitHub}}</p>
+        <button class="open-modal">Show</button>
+        <dialog class="modal" id="modal">
+            <h2>{{projeto.titulo}}</h2>
+            <p>{{projeto.participantes}}</p>
+            <button class="modal-botao">&times;</button>
+        </dialog>
     </div>
     {% endfor %}
+</div>
+<div class="novo_projeto">
+    <a href="{% url 'portfolio:novoProjeto' %}">
+        <button>New Project</button>
+    </a>
 </div>
 {% endblock %}

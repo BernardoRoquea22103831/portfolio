@@ -19,3 +19,5 @@ class ProjetoForm(ModelForm):
     class Meta:
         model = Projeto
         fields = '__all__'
+
+

@@ -47,6 +47,28 @@ main {
     padding: 0;
     margin: 0;
 }
-.nova_but:hover{
 
+.nova_but:hover {
+}
+
+.novad_but {
+    padding: 0;
+    margin: 0;
+}
+
+.novad_but button {
+    list-style: none;
+    padding: 9px 25px;
+    background-color: rgb(21, 231, 197);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.coint_but{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 500px;
+    margin-right: 500px;
 }

@@ -10,8 +10,13 @@
     <div class="container">
         {{form.as_p}}
     </div>
-    <div class="nova_but">
-        <button type="submit">Gravar</button>
+    <div class="coint_but">
+        <div class="nova_but">
+            <button type="submit">Gravar</button>
+        </div>
+        <div class="novad_but">
+            <button><a href="{% url 'portfolio:blog'  %}">Cancelar</a></button>
+        </div>
     </div>
 </form>
 {% endblock %}

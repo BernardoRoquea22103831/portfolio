@@ -14,8 +14,8 @@
         <br>
         <p>{{blog.descricao}}</p>
         <br>
-        <p>{{blog.nomeAutor}}</p>
-        <p>{{blog.data.day}}/{{blog.data.month}}/{{blog.data.year}}</p>
+        <p class="nome_autor">{{blog.nomeAutor}}</p>
+        <p class="data_blog">{{blog.data.day}}/{{blog.data.month}}/{{blog.data.year}}</p>
         <button class="blog_botao"><a href="{% url 'portfolio:editarBlog' blog.id %}" class="b">Editar</a></button>
     </div>
 

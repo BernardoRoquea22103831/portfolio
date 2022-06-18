@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap%27');
+
+* {
+    font-family: 'Roboto Slab', serif;
+}
+
 .blog_container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     padding: 25px 100px;
-    font-family: Roboto;
 }
 
 .blogs {
@@ -15,8 +20,10 @@
     background-color: #FFF8DB;
     border-radius: 10px;
     box-shadow: 5px 5px 15px grey;
+    position: relative;
 }
-.blog_container button{
+
+.blog_container button {
     list-style: none;
 
 }
@@ -48,18 +55,32 @@ main {
     transition: all 0.3s ease 0s;
     margin-left: 20px;
 }
-.b{
+
+.b {
     list-style: none;
     text-decoration: none;
     color: black;
 }
-.blog_botao{
+
+.blog_botao {
     padding: 9px 25px;
     background-color: rgb(21, 231, 197);
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     text-align: center;
-    float: right;
+    position: absolute;
+    top:23px;
+    right:5px;
+}
+.nome_autor{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.data_blog{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }

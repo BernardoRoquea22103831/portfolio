@@ -1,0 +1,24 @@
+
+.novaLicenciatura_but button {
+    padding: 9px 25px;
+    background-color: rgb(21, 231, 197);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+}
+.novaLicenciatura_but{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.novaLicenciatura_but button:hover{
+    color: rgb(175, 143, 27);
+}
+.nova_licenciatura_botao{
+    display: flex;
+    text-align: center;
+
+}

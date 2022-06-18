@@ -1,0 +1,41 @@
+.nova_licenciatura_botao button {
+    padding: 9px 25px;
+    background-color: rgb(21, 231, 197);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+}
+.form_nova_projeto{
+    text-align: center;
+}
+
+.projeto_botao {
+
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.projeto_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 10px;
+}
+
+.projeto_div .projeto_botao button {;
+    text-align: center;
+    position: center;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    border: none;
+    padding: 9px 25px;
+    background-color: #1bafaf;
+    color: black;
+    border-radius: 50px;
+
+}

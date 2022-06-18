@@ -1,0 +1,25 @@
+{% extends 'portfolio/layout.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/novoProjeto.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock style %}
+
+
+{% block main %}
+<form method="POST" action="">
+
+    {% csrf_token %}
+    <div class="form_nova_projeto">
+        {{form.as_p}}
+    </div>
+</form>
+<div class="projeto_div">
+    <div class="projeto_botao">
+        <button type="submit">Submeter</button>
+    </div>
+    <div class="projeto_botao">
+        <button><a href="{% url 'portfolio:projetos'  %}">Cancelar</a></button>
+    </div>
+</div>
+{% endblock %}

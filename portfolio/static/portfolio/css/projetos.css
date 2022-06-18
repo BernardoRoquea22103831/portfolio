@@ -1,12 +1,20 @@
 .container_projetos {
     display: grid;
-    gap: 5%;
+    gap: 3%;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin: 10px;
+}
+
+.cont_projetos {
     box-shadow: 5px 5px 10px lightblue;
-    grid-column-gap: 10px;
+    border-radius: 10px;
     margin-inside: auto;
-    width: min(95%, 70rem);
-    border-radius: 20px;
+    padding: 20px;
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 main {
@@ -15,4 +23,53 @@ main {
 
 .cont {
     background-color: lightcyan;
+}
+
+.novo_projeto {
+    text-align: center;
+}
+
+.novo_projeto button {
+    text-align: center;
+    position: center;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    border: none;
+    padding: 9px 25px;
+    background-color: #1bafaf;
+    color: black;
+    border-radius: 50px;
+
+}
+
+.cont_projetos {
+    transition: transform 500ms ease;
+}
+
+.cont_projetos:hover {
+    transform: scale(1.05);
+}
+
+.cont_projetos h2 {
+    position: relative;
+    width: max-content;
+}
+
+.cont_projetos h2::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    background: purple;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+}
+
+.cont_projetos:hover h2::after {
+    transform: scaleX(1);
+}
+.modal{
+    padding: 10px 15px;
 }
